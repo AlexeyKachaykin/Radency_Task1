@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div id="app" class="container">
+        <div id="notes" class="notes-grid"></div>
+        <button id="add-note-btn">Create Note</button>
+        <div id="summary" class="summary-grid"></div>
+
+        <!-- Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form id="note-form" data-id="">
+                    <label for="note-name">Name:</label>
+                    <input type="text" id="note-name" required>
+                    <label for="note-category">Category:</label>
+                    <select id="note-category" required>
+                        <option value="Task">Task</option>
+                        <option value="Random Thought">Random Thought</option>
+                        <option value="Idea">Idea</option>
+                    </select>
+                    <label for="note-content">Content:</label>
+                    <textarea id="note-content" required></textarea>
+                    <button type="submit">Save Note</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Button to view archived notes -->
+<button id="view-archived-btn">View Archived Notes</button>
+
+<!-- Modal for Archived Notes -->
+<div id="archived-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="archived-notes" class="notes-grid"></div>
+    </div>
+</div>
+    </div>
+        <script type="module" src="app.js"></script>
+    </div>
+</body>
+
+</html>
